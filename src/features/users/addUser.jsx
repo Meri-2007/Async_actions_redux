@@ -8,7 +8,7 @@ const AddUser = () => {
   const [salary, setSalary] = useState('')
   const [error, setError] = useState('')
   const dispatch = useDispatch()
-  const navigate = useNavigate(;
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
