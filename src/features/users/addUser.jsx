@@ -4,20 +4,20 @@ import { addUser } from './users.api';
 import { useNavigate } from 'react-router-dom';
 
 const AddUser = () => {
-  const [name, setName] = useState('');
-  const [salary, setSalary] = useState('');
-  const [error, setError] = useState('');
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [name, setName] = useState('')
+  const [salary, setSalary] = useState('')
+  const [error, setError] = useState('')
+  const dispatch = useDispatch()
+  const navigate = useNavigate(;
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!name || !salary) {
-      setError('Please fill the all filed');
+      setError('Please fill the all filed')
       return;
     }
     
-    setError('');
+    setError('')
     await dispatch(addUser({ name, salary }))
     .unwrap()
     .then(() => {
