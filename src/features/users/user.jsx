@@ -4,13 +4,13 @@ import { getUsers } from "./users.api";
 import { Link } from "react-router-dom";
 
 export const Users = () => {
-  const users = useSelector(state => state.accounts);
-  const status = useSelector(state => state.status);
-  const dispatch = useDispatch();
+  const users = useSelector(state => state.accounts)
+  const status = useSelector(state => state.status)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getUsers());
-  }, [dispatch]);
+    dispatch(getUsers())
+  }, [dispatch])
 
   return (
     <>
